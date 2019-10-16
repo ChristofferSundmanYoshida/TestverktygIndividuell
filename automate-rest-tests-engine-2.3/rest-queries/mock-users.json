@@ -1,0 +1,52 @@
+[
+  {
+    "username": "Test1",
+    "password": "Test1",
+    "firstName": "Test1",
+    "lastName": "Testare",
+    "address": "Testgatan1",
+    "postnr": "11111",
+    "city": "Testopolis",
+    "email": "test1@doesitwork.com"    
+  },
+  {
+    "username": "Test2",
+    "password": "Test2",
+    "firstName": "Test2",
+    "lastName": "Testare",
+    "address": "Testgatan1",
+    "postnr": "11111",
+    "city": "Testopolis",
+    "email": "Test2@doesitwork.com" 
+  },
+  {
+    "username": "Test3",
+    "password": "Test3",
+    "firstName": "Test3",
+    "lastName": "Testare",
+    "address": "Testgatan1",
+    "postnr": "11111",
+    "city": "Testopolis",
+    "email": "Test3@doesitwork" 
+  },
+  {
+    "username": "Test4",
+    "password": "Test4",
+    "firstName": "Test4",
+    "lastName": "Testare",
+    "address": "Testgatan1",
+    "postnr": "11111",
+    "city": "Testopolis",
+    "email": "Test4@doesitwork.com" 
+  },
+  {
+    "username": "Test5",
+    "password": "Test5",
+    "firstName": "Test5",
+    "lastName": "Testare",
+    "address": "Testgatan1",
+    "postnr": "11111",
+    "city": "Testopolis",
+    "email": "Test5@doesitwork.com" 
+  }
+]
