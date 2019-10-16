@@ -146,5 +146,23 @@ let api = [
     statuscode: Number,
     error: Object
   }
+  {
+    description: 'Seeing another customers tshirt',
+    request:{
+      method: 'get',
+      url: '/rest/order/:orderid'
+      params: ['orderid']
+      },
+        response:{
+          content:[
+          {
+            orderid: Number,
+            date: String,
+            price: Number,
+            discount: String,
+          }
+      ]
+    }
+  }
 
 ]
