@@ -112,4 +112,35 @@ describe('Shop.vue', () => {
     expect(wrapper.vm.history).toMatch('green') //<--- en match behövs
   })
 
+  test('TD?? I peruse other customers custom tshirts', () => {
+    const wrapper = mount(tShirtConfig)
+
+    //let choosenOrderID = order[2] <- leftover from earlier idea, save!
+
+    wrapper.vm.viewTshirtID('2') //choose tshirt with tshirtIDs '4'
+    expect(wrapper.vm.tShirt.tshirtID).toMatch('2') //<--- funkar det?
+  })
+
+  test('TD?? I order a tshirt that another customer created', () => {
+    const wrapper = mount (order)
+    const wrapper2 = mount(tShirtConfig)
+    const wrapper3 = mount(Confirmation)
+
+    //let choosenOrderID = order[3] <- leftover from earlier, might need again
+    
+    wrapper2.vm.tshirt.tshirtID(2)
+    wrapper.vm.pickUpDesign(tShirtConfig)
+    expect(wrapper.vm.orderData).toMatch(tShirtConfig)
+
+    wrapper3.changePaymentMethod.card(cardInformation)
+    expect(wrapper3.vm.paymentData()).toContain('Card Number:')
+    expect(wrapper3.vm.text()).toContain('Expiry date:')
+    expect(wrapper3.vm.text()).toContain('CVC Code:')
+
+    wrapper3.addToorderConfirmation('Purchase ... done!')
+
+
+
+  })
+
 })

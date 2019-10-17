@@ -150,17 +150,42 @@ let api = [
     description: 'Seeing another customers tshirt',
     request:{
       method: 'get',
-      url: '/rest/order/:orderid'
-      params: ['orderid']
+      url: '/rest/tshirtIDs/:tshirtID'
+      params: ['tshirtID']
       },
         response:{
-          content:[
+        content:[
+        {
+        text: String,
+        textsize: Number,
+        colour: String,
+        material: String,
+        size: String,
+        textcolour: String,
+        bold: Bool,
+        cursive: Bool,
+        font: Bool,
+        img: String,
+        imgsize: String
+        }
+
           {
-            orderid: Number,
-            date: String,
-            price: Number,
-            discount: String,
-          }
+    description: 'Create one order from tshirtID',
+    request:{
+      method: 'post',
+      url: '/rest/order',
+      body:{
+        userid: String,
+        tshirtID,
+        price: Number,
+        discount: String,
+      }
+    },
+    response:{
+      statusCode: Number,
+      error: Object
+    }
+  },
       ]
     }
   }
